@@ -1,0 +1,430 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+.container {
+	/*width: 100%;*/
+    /*height: 100vh;*/
+    width: auto;
+    height: 100vh;
+	background: linear-gradient(rgba(0, 0, 0, 0.3), transparent), url("/Images/background.png");
+	background-size: cover;
+	padding: 0 8%;
+    position: relative;
+}
+
+.nav {
+	display: flex;
+	width: 100%;
+	align-items: center;
+	flex-wrap: wrap;
+	padding: 5px 0;
+}
+
+nav p {
+	color: #fff;
+	font-size: 30px;
+    font-weight: 600;
+    padding: 30px 0;
+}
+
+nav ul {
+	flex: 1;
+	text-align: right;
+	padding-right: 25px;
+	padding-bottom: -5px;
+}
+
+nav ul li {
+	display: inline-block;
+	list-style: none;
+	margin: 10px 30px;
+}
+
+nav ul li a {
+	color: #fff;
+	text-decoration: none;
+    position: relative;
+}
+
+nav ul li a::after {
+	content: '';
+	width: 0;
+	height: 3px;
+	position: absolute;
+	bottom: -5px;
+	left: 50%;
+	transform: translateX(-50%);
+	background: #fff;
+	transition: width 0.3s;
+}
+
+nav ul li a:hover::after {
+	width: 50%;
+}
+
+.InputBoxContainer {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr); /* Adjust the number of columns as needed */
+	grid-column-gap: 20px; /* Adjust the gap between the columns */
+	width: 60%; /* Adjust the width of the container to control the spacing */
+	margin-bottom: 20px;
+  }
+  
+  .InputBox,
+  .InputBox1,
+  .InputBox2,
+  .InputBox3,
+  .InputBox4,
+  .InputBox5,
+  .InputBox6,
+  .InputBox7,
+  .InputBox8,
+  .InputBox9 {
+	position: relative;
+	flex: 1; /* Adjust flex value to control the width of each InputBox */
+	margin-bottom: 5px;
+  }
+
+.InputBox input,
+.InputBox1 input,
+.InputBox2 input,
+.InputBox3 input,
+.InputBox4 input,
+.InputBox5 input,
+.InputBox6 input,
+.InputBox7 input,
+.InputBox8 input,
+.InputBox9 input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 5px;
+    outline: none;
+    color: black;
+    font-size: 1em;
+}
+
+.InputBox span,
+.InputBox1 span,
+.InputBox2 span,
+.InputBox3 span,
+.InputBox4 span,
+.InputBox5 span,
+.InputBox6 span,
+.InputBox7 span,
+.InputBox8 span,
+.InputBox9 span {
+    position: absolute;
+    left: 8px;
+    top: 30%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    font-size: 1em;
+    color: rgba(255, 255, 255, 0.25);
+    text-transform: uppercase;
+    transition: 0.5s;
+}
+
+.InputBox input:valid ~ span,
+.InputBox input:focus ~ span,
+.InputBox1 input:valid ~ span,
+.InputBox1 input:focus ~ span,
+.InputBox2 input:valid ~ span,
+.InputBox2 input:focus ~ span,
+.InputBox3 input:valid ~ span,
+.InputBox3 input:focus ~ span,
+.InputBox4 input:valid ~ span,
+.InputBox4 input:focus ~ span,
+.InputBox5 input:valid ~ span,
+.InputBox5 input:focus ~ span,
+.InputBox6 input:valid ~ span,
+.InputBox6 input:focus ~ span,
+.InputBox7 input:valid ~ span,
+.InputBox7 input:focus ~ span,
+.InputBox8 input:valid ~ span,
+.InputBox8 input:focus ~ span,
+.InputBox9 input:valid ~ span,
+.InputBox9 input:focus ~ span {
+    color: #1d2b3a;
+    transform: translateX(10px) translateY(-18px);
+    font-size: 0.7em;
+    padding: 0 10px;
+    background: #00dfc4;
+    border-left: 1px solid #00dfc4;
+    border-right: 1px solid #00dfc4;
+    letter-spacing: 0.2em;
+}
+
+.InputBox:nth-child(2) input:valid ~ span,
+.InputBox:nth-child(2) input:focus ~ span,
+.InputBox1:nth-child(2) input:valid ~ span,
+.InputBox1:nth-child(2) input:focus ~ span,
+.InputBox2:nth-child(2) input:valid ~ span,
+.InputBox2:nth-child(2) input:focus ~ span,
+.InputBox3:nth-child(2) input:valid ~ span,
+.InputBox3:nth-child(2) input:focus ~ span,
+.InputBox4:nth-child(2) input:valid ~ span,
+.InputBox4:nth-child(2) input:focus ~ span,
+.InputBox5:nth-child(2) input:valid ~ span,
+.InputBox5:nth-child(2) input:focus ~ span,
+.InputBox6:nth-child(2) input:valid ~ span,
+.InputBox6:nth-child(2) input:focus ~ span,
+.InputBox7:nth-child(2) input:valid ~ span,
+.InputBox7:nth-child(2) input:focus ~ span,
+.InputBox8:nth-child(2) input:valid ~ span,
+.InputBox8:nth-child(2) input:focus ~ span,
+.InputBox9:nth-child(2) input:valid ~ span,
+.InputBox9:nth-child(2) input:focus ~ span {
+    background: #00dfc4;
+    color: #1d2b3a;
+    border-radius: 2px;
+}
+
+.InputBox input:valid,
+.InputBox input:focus,
+.InputBox1 input:valid,
+.InputBox1 input:focus,
+.InputBox2 input:valid,
+.InputBox2 input:focus,
+.InputBox3 input:valid,
+.InputBox3 input:focus
+.InputBox4 input:valid,
+.InputBox4 input:focus,
+.InputBox5 input:valid,
+.InputBox5 input:focus,
+.InputBox6 input:valid,
+.InputBox6 input:focus,
+.InputBox7 input:valid,
+.InputBox7 input:focus
+.InputBox8 input:valid,
+.InputBox8 input:focus,
+.InputBox9 input:valid,
+.InputBox9 input:focus {
+    border: 1px solid #00dfc4;
+}
+
+.text-box {
+	color: #fff;
+	position: absolute;
+	bottom: 8%;
+}
+
+.text-box p {
+	font-size: 50px;
+	font-weight: 600;
+}
+
+.text-box h1 {
+	font-size: 7vw;
+	line-height: 1;
+	margin-left: -10px;
+	color: #fff;
+	text-shadow: 0 0 8px #00dfc4;
+	animation: glow 1.5s ease-in-out infinite;
+	margin-bottom: 10px; /* Add a margin at the bottom to create a gap */
+}
+
+ 
+  @keyframes glow {
+    0%, 100% {
+      text-shadow: 0 0 10px #00dfc4;
+    }
+    50% {
+      text-shadow: 0 0 20px #00dfc4;
+    }
+  }
+  
+ 
+  .text-box h3 {
+	font-size: 24px;
+	font-weight: 500;
+	margin-top: 10px; /* Add a margin at the top to create a gap */
+}
+
+.Dropdown-Menu {
+	position: fixed;
+	/*margin-top: 150px;*/
+	width: 200px; /* Adjust the width as needed */
+	top: 180px; /* Adjust this value to set the distance from the top of the screen */
+	left: calc(6% + -50px); /* Adjust this value to position the button after the .Submit button */
+  }
+  
+  ul.ks-cboxtags {
+	list-style: none;
+	padding: 6px;
+	display: flex; /* Use flexbox to display checkboxes side by side */
+	/* gap: 10px;  Add some space between checkboxes */
+  }
+
+  
+  ul.ks-cboxtags li label {
+	display: inline-block;
+	background-color: rgba(255, 255, 255, 0.9);
+	border: 2px solid rgba(139, 139, 139, 0.3);
+	color: #adadad;
+	border-radius: 25px;
+	white-space: nowrap;
+	padding: 8px 12px;
+	cursor: pointer;
+	transition: all 0.2s;
+  }
+  
+  ul.ks-cboxtags li label::before {
+	display: inline-block;
+	font-style: normal;
+	font-variant: normal;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+	font-family: "Font Awesome 5 Free";
+	font-weight: 900;
+	font-size: 12px;
+	padding: 2px 6px 2px 2px;
+	content: "\f067";
+	transition: transform 0.3s ease-in-out;
+  }
+  
+  ul.ks-cboxtags li input[type="checkbox"]:checked + label::before {
+	content: "\f00c";
+	transform: rotate(-360deg);
+	transition: transform 0.3s ease-in-out;
+  }
+  
+  ul.ks-cboxtags li input[type="checkbox"]:checked + label {
+	border: 2px solid #1bdbf8;
+	background-color: #12bbd4;
+	color: #fff;
+	transition: all 0.2s;
+  }
+  
+  /* Remove the following lines that cause issues */
+  ul.ks-cboxtags li input[type="checkbox"] {
+	display: absolute;
+	position: absolute;
+	opacity: 0;
+  }
+  
+  ul.ks-cboxtags li input[type="checkbox"]:focus + label {
+	border: 2px solid #e9a1ff;
+  }
+  
+
+#goBackButton {
+	position: fixed;
+	text-align: center;
+	width: 150px;
+	padding: 10px;
+	font-size: 12px;
+	font-weight: 600;
+	border: 3px solid #15f4ee;
+	text-transform: uppercase;
+	letter-spacing: 5px;
+	cursor: pointer;
+	border-radius: 30px;
+	transition: 1.5s;
+	margin-top: 20px;
+	top: 330px; /* Adjust this value to set the distance from the top of the screen */
+	left: calc(42% + -50px); /* Adjust this value to position the button after the .Submit button */
+  }
+
+#goBackButton:hover {
+	box-shadow: 0 3px 30px 0 #15f4ee inset, 0 3px 30px 0 #15f4ee;
+}
+
+.Submit {
+	position: fixed;
+	text-align: center;
+	width: 150px;
+	padding: 10px;
+	font-size: 12px;
+	font-weight: 600;
+	border: 3px solid #15f4ee;
+	text-transform: uppercase;
+	letter-spacing: 5px;
+	cursor: pointer;
+	border-radius: 30px;
+	transition: 1.5s;
+	margin-top: 20px;
+	top: 330px; /* Adjust this value to set the distance from the top of the screen */
+	left: calc(6% + -50px); /* Adjust this value to position the button after the .Submit button */
+}
+
+.Submit:hover {
+	box-shadow: 0 3px 30px 0 #15f4ee inset, 0 3px 30px 0 #15f4ee;
+}
+
+.Sequence-Steps {
+	position: absolute;
+	right: 5%;
+	bottom: 20%;
+	color: red;
+	font-size: 7px;
+	display: block;
+	margin: 25px 5px;
+	border: 1px solid #fff;
+	border-radius: 3px;
+}
+
+/* Media Queries */
+
+/* For screens with width up to 768px */
+@media (max-width: px) {
+	.container {
+		padding: 0 5%;
+	}
+
+	.nav p {
+		font-size: 24px;
+	}
+
+	nav ul li {
+		margin: 10px 15px;
+	}
+
+	.text-box p {
+		font-size: 30px;
+	}
+
+	.text-box h1 {
+		font-size: 90px;
+		line-height: 80px;
+	}
+
+	.text-box h3 {
+		font-size: 24px;
+	}
+}
+
+/* For screens with width up to 600px */
+@media (max-width: 1980px) {
+	.container {
+		padding: 0 3%;
+	}
+
+	.nav p {
+		font-size: 20px;
+	}
+
+	nav ul li {
+		margin: 10px 10px;
+	}
+
+	.text-box p {
+		font-size: 24px;
+	}
+
+	.text-box h1 {
+		font-size: 70px;
+		line-height: 60px;
+	}
+
+	.text-box h3 {
+		font-size: 18px; /* Adjust font size for smaller screens */
+	}
+
+	.nav ul {
+		padding-right: 15px;
+	}
+}

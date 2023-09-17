@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Design your Flow</title>
+  <link rel="stylesheet" href="/CSS/StyleCarrier.css">
+</head>
+<body>
+  <div class="container">
+    <nav>
+      <p>Design your Flow</p>
+      <ul>
+        <li><a href="">About</a></li>
+        <li><a href="">Contact</a></li>
+        <li><a href="">Portfolio</a></li>
+      </ul>
+    </nav>   
+    <button id="goBackButton">Go Back</button>   
+    <div class="InputBoxContainer">
+        <div class="InputBox">
+            <input id="strCarrierCode" placeholder="Enter Carrier code" type="text" required>
+            <span>T-Code</span>
+        </div>
+        <div class="InputBox">
+            <input id="strInpath" placeholder="Enter Carrier Name" type="text" required>
+            <span>Carrier Name</span>
+        </div>
+        <div class="InputBox">
+          <input id="str7Letter" placeholder="Enter CHR 7Letter" type="text" required>
+          <span>CHR 7Letter</span>
+        </div>
+    </div>
+
+    <div class="Dropdown-Menu">
+      <ul class="ks-cboxtags">
+        <li><input type="checkbox" id="checkboxOne" value="New T Setup"><label for="checkboxOne">New Setup</label></li>
+        <li><input type="checkbox" id="checkboxTwo" value="Lodestars Carrier"><label for="checkboxTwo">Lodestars</label></li>
+        <li><input type="checkbox" id="checkboxThree" value="TMC EMEA"><label for="checkboxThree">TMC EMEA</label></li>
+        <li><input type="checkbox" id="checkboxFour" value="GFS"><label for="checkboxFour">GFS</label></li>
+      </ul>
+    </div>
+    <button type="submit" class="Submit" id="strSubmit">Submit</button>
+    <div id="consoleLogs"></div>
+    <div class="Sequence-Steps">
+      <h1 id="Submit"></h1>
+      <h1 id="TCode"></h1>
+      <h1 id="Inpath"></h1>
+      <h1 id="NewSetup"></h1>
+      <h1 id="Lodestars"></h1>
+      <h1 id="7Letter"></h1>
+    </div>
+    <div class="text-box">
+      <p>I'M</p>
+      <h1>Automating</h1>
+      <h3>Your File Flow only for TMC EMEA Carriers (.xml) IB and OB</h3>
+    </div>
+  </div>
+  <script type="text/javascript" src="/Scripts/ScriptVar.js"></script>
+  <script>
+      document.getElementById("goBackButton").addEventListener("click", function () {
+        window.history.go(-1);
+      });
+  </script>
+  </body>
+</html>

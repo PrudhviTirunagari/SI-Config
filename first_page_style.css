@@ -1,0 +1,63 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+
+.header {
+	width: 100%;
+	height: 100vh;
+	background: linear-gradient(rgba(0, 0, 0, 0.3), transparent), url("/Images/background.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding: 0 8%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+}
+
+.button-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#openButtonCarrier,
+#openButtonCustomer {
+	padding: 15px 30px;
+	margin: 10px;
+	font-size: 40px;
+	color: white;
+	background-color: #1d2b3a;
+	border: none;
+	border-radius: 50px;
+	cursor: pointer;
+	box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3);
+	transition: background-color 0.3s ease;
+}
+
+#openButtonCarrier:hover,
+#openButtonCustomer:hover {
+	background-color: #00dfc4;
+}
+
+/* Adding some animations */
+@keyframes fadeInScaleUp {
+	0% {
+		opacity: 0;
+		transform: scale(0.8);
+	}
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+#openButtonCarrier,
+#openButtonCustomer {
+	animation: fadeInScaleUp 1s ease;
+}
+
+

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Design your Flow</title>
+  <link rel="stylesheet" href="/CSS/StyleCust.css">
+</head>
+<body>
+  <div class="container">
+    <nav>
+      <p>Design your Flow</p>
+      <ul>
+        <li><a href="">About</a></li>
+        <li><a href="">Contact</a></li>
+        <li><a href="">Portfolio</a></li>
+      </ul>
+    </nav>     
+    <div class="InputBoxContainer">
+      <div class="InputBox">
+        <input id="strCustCode" placeholder="Enter Customer code" type="text" required>
+        <span>C-Code</span>
+        </div>
+        <div class="InputBox">
+        <input id="strInpath" placeholder="Enter Customer Name" type="text" required>
+        <span>Customer Name</span>
+        </div>
+        <div class="InputBox">
+          <input id="str7Letter" placeholder="Enter CHR 7Letter" type="text" required>
+          <span>CHR 7Letter</span>
+        </div>
+    </div>
+
+    <div class="Dropdown-Menu">
+      <ul class="ks-cboxtags">
+        <li><input type="checkbox" id="checkboxOne" value="204 IB Doc"><label for="checkboxOne">204 IB Doc</label></li>
+        <li><input type="checkbox" id="checkboxTwo" value="514 OB Doc"><label for="checkboxTwo">514 OB Doc</label></li>
+        <li><input type="checkbox" id="checkboxThree" value="520 OB Doc"><label for="checkboxThree">520 OB Doc</label></li>
+        <li><input type="checkbox" id="checkboxFour" value="No Mailbox for 520 or 514"><label for="checkboxFour">No Mailbox for 520 or 514</label></li>
+      </ul>
+      <ul class="ks-cboxtags">
+        <li><input type="checkbox" id="checkbox4" value="New C Setup"><label for="checkbox4">New Setup</label></li>
+        <li><input type="checkbox" id="checkbox5" value="Lodestars Customer"><label for="checkbox5">Lodestars</label></li>
+        <li><input type="checkbox" id="checkbox6" value="XML"><label for="checkbox6">XML</label></li>
+        <li><input type="checkbox" id="checkbox7" value="FF"><label for="checkbox7">FF</label></li>
+        <li><input type="checkbox" id="checkbox8" value="CharReplaceOnly"><label for="checkbox8">CharReplaceOnly IB</label></li>
+        <li><input type="checkbox" id="checkbox9" value="UnicodeProcessOnly"><label for="checkbox9">UnicodeProcessOnly IB</label></li>
+      </ul>
+    </div>
+    <div class="InputBoxContainer">
+      <button type="submit" class="Submit" id="strSubmit">Submit</button>
+      <button id="goBackButton">Go Back</button> 
+    </div>
+    <div id="consoleLogs"></div>
+    <div class="Sequence-Steps">
+      <h1 id="Submit"></h1>
+      <h1 id="CCode"></h1>
+      <h1 id="Inpath"></h1>
+      <h1 id="NewSetup"></h1>
+      <h1 id="Lodestars"></h1>
+      <h1 id="7Letter"></h1>
+      <h1 id="204"></h1>
+      <h1 id="520"></h1>
+      <h1 id="514"></h1>
+      <h1 id="XML"></h1>
+      <h1 id="FF"></h1>
+    </div>
+    <div class="text-box">
+      <p>I'M</p>
+      <h1>Automating</h1>
+      <h3>Your File Flow only for TMC EMEA Customers (xml or FF) IB and OB</h3>
+    </div>
+  </div>
+  </body>
+  <script type="text/javascript" src="/Scripts/ScriptVar.js"></script>
+  <script>
+    document.getElementById("goBackButton").addEventListener("click", function () {
+      window.history.go(-1);
+    });
+</script>
+</html>
